@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+:root{
+    --Very_Dark_Magenta: hsl(300, 43%, 22%);
+    --Soft_Pink: hsl(333, 80%, 67%);
+    --Dark_Grayish_Magenta: hsl(303, 10%, 53%);
+    --Light_Grayish_Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+body{
+    min-height: 100vh;
+    
+}
+.wrapper{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.bg-pc{
+    display: block;
+}
+.bg-phone{
+    display: none;
+}
+.bg-images{
+    position: relative;
+}
+.bg-img{
+    position: absolute;
+}
+
+.bg-top{
+    top: 0;
+    left: 0;
+}
+.bg-bottom{
+    bottom: 0;
+    right: 0;
+}
+
+
+
+.header-row{
+    width: 1110px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.header{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--Very_Dark_Magenta);
+    width: 250px;
+}
+.desc{
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--Dark_Grayish_Magenta);
+    width: 350px;
+    margin-top: 40px;
+}
+
+
+.star-list{
+    width: 380px;
+    padding: 15px;
+    background: var(--Light_Grayish_Magenta);
+    margin: 6px;
+    border-radius: 4px;
+}
+.star-list .rate-text{
+    font-weight: 700;
+    margin-left: 15px;
+    color: var(--Very_Dark_Magenta);
+}
+.star-list:nth-child(1){
+    transform: translateX(-30%);
+}
+.star-list:nth-child(2){
+    transform: translateX(-15%);
+}
+
+
+
+/* card */
+.card-row{
+    width: 1110px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    
+}
+.card{
+    width: 350px;
+    padding: 30px;
+    background: var(--Very_Dark_Magenta);
+}
+.profile{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.profile .image{
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.profile .image img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.profile .name{
+    color: var(--White);
+    font-size: 15px;
+    font-weight: 500;
+}
+.profile .verified{
+    color: var(--Soft_Pink);
+    font-size: 15px;
+    font-weight: 400;
+}
+.card .about-him{
+    color: var(--White);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4rem;
+}
+
+.card:nth-child(2){
+    transform: translateY(8%);
+    
+}
+.card:nth-child(3){
+    transform: translateY(16%);
+    
+}
+
+
+@media only screen and (max-width: 1150px) {
+    .header-row{
+        width: 100%;
+        padding:  0 50px;
+    }
+    .card-row{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        margin-bottom: 50px;
+        width: 60%;
+    }
+    .card:nth-child(2){
+        transform: translateY(0);
+        
+    }
+    .card:nth-child(3){
+        transform: translateY(0);
+        
+    }
+}
+@media only screen and (max-width: 900px){
+    .header-row{
+        flex-direction: column;
+        align-items: center;
+    }
+    .star-list:nth-child(1){
+        transform: translateX(0);
+    }
+    .star-list:nth-child(2){
+        transform: translateX(0);
+    }
+.desc{
+    margin: 20px auto;
+}
+}
+
+@media only screen and (max-width: 500px){
+    .bg-pc{
+        display: none;
+    }
+    .bg-phone{
+        display: block;
+    }
+    .header-row{
+        text-align: center;
+        padding: 0;
+    }
+    .header{
+        margin: auto;
+        font-size: 2.8rem;
+        width: 300px;
+        letter-spacing: -0.1rem;
+        line-height: 2.5rem;
+    }
+    .desc{
+        width: 80%;
+    }
+
+    .star-col{
+        width: 100%;
+    }
+    .star-list{
+        width: 100%;
+        margin: 10px 0;
+    }
+    .rate-text{
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .card{
+        width: 95%;
+    }
+}
